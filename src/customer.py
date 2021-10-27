@@ -18,3 +18,8 @@ class Customer:
         if self.enough_money(drink):
             self.reduce_wallet(drink.price)
             self.drunkness += drink.alcohol_level
+
+    def buy_food(self, food):
+        if self.enough_money(food):
+            self.reduce_wallet(food.price)
+            self.drunkness -= food.rejuvination

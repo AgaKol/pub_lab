@@ -2,14 +2,17 @@ import unittest
 from src.customer import Customer
 from src.drinks import Drinks
 from src.pub import Pub
+from src.food import Food
 
 
 class CustomerTest(unittest.TestCase):
     def setUp(self):
         self.customer = Customer("Frodo", 51, 10, 0)
         self.customer2 = Customer("Sam", 70, 0, 6)
+        self.customer3 = Customer("Pippin", 35, 15, 5)
         self.drink = Drinks("Beer", 1, 3)
         self.pub = Pub("The Prancing Pony", 1000)
+        self.food = Food("Pizza", 4, 4)
 
     def test_customer_has_name(self):
         self.assertEqual("Frodo", self.customer.name)
@@ -37,3 +40,8 @@ class CustomerTest(unittest.TestCase):
         self.customer.buy_drink(self.drink)
         self.assertEqual(3, self.customer.drunkness)
         self.assertEqual(9, self.customer.wallet)
+
+    def test_customer_can_buy_food(self):
+        self.customer.buy_food(self.food)
+        self.assertEqual(15, self.customer3.wallet)
+        self.assertEqual(5, self.customer3.drunkness)
