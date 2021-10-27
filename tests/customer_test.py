@@ -8,3 +8,6 @@ class CustomerTest(unittest.TestCase):
 
     def test_customer_has_name(self):
         self.assertEqual("Frodo", self.customer.name)
+
+    def test_customer_age(self):
+        self.assertEqual(51, self.customer.age)
