@@ -4,3 +4,6 @@ class Pub:
         self.till = till
         self.drinks = []
         self.stock = {}
+
+    def increase_till(self, drink_price):
+        self.till += drink_price
