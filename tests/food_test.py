@@ -9,3 +9,6 @@ class FoodTest(unittest.TestCase):
 
     def test_food_has_name(self):
         self.assertEqual("Lasagne", self.food.name)
+
+    def test_food_has_price(self):
+        self.assertEqual(7, self.food.price)
