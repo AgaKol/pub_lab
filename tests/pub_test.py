@@ -10,3 +10,6 @@ class PubTest(unittest.TestCase):
 
     def test_pub_has_name(self):
         self.assertEqual("The Prancing Pony", self.pub.name)
+
+    def test_pub_has_till(self):
+        self.assertEqual(1000, self.pub.till)
